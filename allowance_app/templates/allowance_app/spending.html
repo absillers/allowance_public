@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" , href="{% static 'css/style.css' %}" >
+
+<form action ="/spending"  method="POST"> {% csrf_token %}
+    <div class='form-control'> Today I can spend: {{i_can_spend_today}}
+    </div>
+    <div class='form-control'> I can spend (total): {{i_can_spend_total}}
+    </div>
+    <div class='form-control'>
+    {{form.category}}
+    </div>
+    <div class='form-control'>
+    {{form.description}}
+    </div>
+    <div class='form-control'>
+    {{form.price}}
+    </div>
+    <div class = 'form-control'>
+    {{form.date}}
+    </div>
+    <div class = 'form-control' > Credit
+    {{form.credit}}
+    </div>
+    
+    <!-- {{form.as_ul}}-->
+<input type='submit' value="Save" /> 
+</form>
+{% endblock %}
+

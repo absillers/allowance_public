@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" , href="{% static 'css/style.css' %}" >
+
+<form method='POST'> {% csrf_token %}
+    <div class='form-control'>  {{form.allowance_no_debt}}
+    </div>
+    <div class='form-control'>  {{form.allowance_debt}}
+    </div>
+
+<input type='submit' value="Save" />
+</form>
+{% endblock %}
+

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% for instance in object_list %}
+    <p></p>
+    <p>{{ instance.category}} - {{instance.price}} - {{instance.date}}</p>
+{% endfor %}
+
+{% endblock %}
+
